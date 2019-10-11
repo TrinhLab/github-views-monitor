@@ -1,4 +1,4 @@
-# Usage monitor
+# Github views monitor
 
 Monitor views of software distributed through Github.
 Views corresponds to the individuals visiting the repository page, and takes into account unique individuals.
