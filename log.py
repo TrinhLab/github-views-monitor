@@ -5,7 +5,7 @@ import datetime
 import argparse
 
 def main():
-    #arguments
+    # Parse arguments
     parser = argparse.ArgumentParser(description='Log github views of public repositories for an organization',     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('-o', '--data_file_path', type=str, help='Path to .tsv file where data is stored', default="data.tsv")
     parser.add_argument('-t', '--secret_token_path', type=str, help='Path to one line text file with authentication token', default="secret_token")
@@ -14,12 +14,9 @@ def main():
 
     args = parser.parse_args()
 
-    # program
-
     # Get repo names
     resp = requests.get(f'https://api.github.com/orgs/{args.org_name}/repos')
     repo_names = [repo['name'] for repo in resp.json()]
-
 
     # Get traffic
     with open(args.secret_token_path, "r") as f:
