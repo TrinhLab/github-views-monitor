@@ -21,7 +21,8 @@ https://github.com/settings/tokens
 run `./log.py -h` for more info
 
 Set up as cronjob to run regularly, for example to run once a week (Sunday at midnight to be specific):
-0 0 * * 0 /path/to/usage-monitor/log.py -o /path/to/github-views-monitor/data.tsv -t /path/to/github-views-monitor/secret_token
+
+`0 0 * * 0 /path/to/github-views-monitor/log.py -o /path/to/github-views-monitor/data.tsv -t /path/to/github-views-monitor/secret_token`
 
 # Notes
 Currently it is just monitoring the data, after sufficient data is available a function to plot it will be added
